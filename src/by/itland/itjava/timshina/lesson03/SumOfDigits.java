@@ -11,14 +11,14 @@ public class SumOfDigits {
         int c = Math.abs(x) % 100 / 10;
         int d = Math.abs(x) / 100 % 10;
         int res = 0;
-        if ((x > 999 && x < 10000) )
+        if ((x > 999 && x < 10000))
             System.out.println(a + b + c + d);
         else if (x > -10000 && x < -999) {
             res = (a + b + c + d);
             System.out.println(res * (-1));
-        }
-        else
-             System.out.println("Число не четырехзначное");
+        } else
+            System.out.println("Число не четырехзначное");
 
+    }{
     }
 }
