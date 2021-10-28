@@ -1,4 +1,4 @@
-package by.itland.itjava.drobyazko.lesson03;
+package by.itland.itjava.materials.lesson03;
 
 
 import org.junit.Test;
