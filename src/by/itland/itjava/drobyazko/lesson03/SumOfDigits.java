@@ -1,11 +1,10 @@
 package by.itland.itjava.drobyazko.lesson03;
 
 import java.util.Scanner;
-//abcd//
-//1432//
 
 public class SumOfDigits {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
         int a = x / 1000;
@@ -18,7 +17,5 @@ public class SumOfDigits {
             System.out.println("-" + (a + b + c + d));
         else
             System.out.println("Число не четырехзначное");
-
-
     }
 }
