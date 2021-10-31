@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class CheckLastNumber {
     public static void main(String[] args) {
-        
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int k = scanner.nextInt();
@@ -14,5 +13,6 @@ public class CheckLastNumber {
             System.out.printf("Цифра %d является последней числа %d", k, n);
         else
             System.out.printf("Цифра %d не является последней числа %d",k,n);
+
     }
 }

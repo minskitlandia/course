@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class EqualNumber {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
         int b= scanner.nextInt();
@@ -19,5 +18,6 @@ public class EqualNumber {
             System.out.println(b + " " + c);
         else
             System.out.println("Одинаковых чисел нет");
+
     }
 }

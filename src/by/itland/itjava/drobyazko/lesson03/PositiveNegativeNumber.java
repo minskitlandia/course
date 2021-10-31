@@ -13,5 +13,6 @@ public class PositiveNegativeNumber {
             System.out.println("Число положительное");
         else
             System.out.println("Число ноль");
+
     }
 }
