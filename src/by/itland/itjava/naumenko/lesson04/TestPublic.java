@@ -1,6 +1,4 @@
-package by.itland.itjava.naumenko.lesson04.lesson04;
-
-import by.itland.itjava.naumenko.lesson04.TestIfExample;
+package by.itland.itjava.naumenko.lesson04;
 
 import java.util.Scanner;
 
