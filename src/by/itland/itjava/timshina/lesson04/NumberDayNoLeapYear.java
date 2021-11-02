@@ -7,23 +7,24 @@ public class NumberDayNoLeapYear {
         Scanner scanner = new Scanner(System.in);
         String month = scanner.next();
         int day = scanner.nextInt();
-        getNumberDay (day, month );
+        getNumberDay(day, month);
         System.out.println(getNumberDay(day, month));
 
     }
-    public static int getNumberDay (int day, String month ){
+
+    public static int getNumberDay(int day, String month) {
         if (month.toLowerCase().equals("январь"))
             return Math.abs(day);
         if (month.toLowerCase().equals("февраль"))
-            return  31 + Math.abs(day);
+            return 31 + Math.abs(day);
         if (month.toLowerCase().equals("март"))
-            return  28 + 31 + Math.abs(day);
+            return 28 + 31 + Math.abs(day);
         if (month.toLowerCase().equals("апрель"))
-            return  31 + 28 + 31 + Math.abs(day);
+            return 31 + 28 + 31 + Math.abs(day);
         if (month.toLowerCase().equals("май"))
-            return  30 + 31 + 28 + 31 + Math.abs(day);
+            return 30 + 31 + 28 + 31 + Math.abs(day);
         if (month.toLowerCase().equals("июнь"))
-            return  31 + 30 + 31 + 28 + 31 + Math.abs(day);
+            return 31 + 30 + 31 + 28 + 31 + Math.abs(day);
         if (month.toLowerCase().equals("июль"))
             return 30 + 31 + 30 + 31 + 28 + 31 + Math.abs(day);
         if (month.toLowerCase().equals("август"))
