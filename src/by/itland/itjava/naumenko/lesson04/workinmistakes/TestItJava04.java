@@ -1,4 +1,4 @@
-package by.itland.itjava.materials.lesson05;
+package by.itland.itjava.naumenko.lesson04.workinmistakes;
 
 import org.junit.Test;
 
@@ -12,58 +12,86 @@ import static org.junit.Assert.fail;
 @SuppressWarnings("all")
 
 //поставьте курсор на следующую строку и нажмите Ctrl+Shift+F10
-public class TestItJava05 {
+public class TestItJava04 {
 
     @Test
-    public void testPrintNumber() throws Exception {
-        System.out.println("\n\nПроверка printNumberFromZeroToTenInclude");
-        checkMethod("PrintNumber", "static printNumberFromZeroToTenInclude", int.class);
-        run("10 0 0").include("1 2 3 4 5 6 7 8 9 10");
-        run("5 0 0").include("1 2 3 4 5");
-        System.out.println("\n\nПроверка printNumberFromZeroToTenInclude");
-        checkMethod("PrintNumber", "static printNumberFromTenToZeroExclude", int.class);
-        run("15 0 0").include("15 14 13 12 11 10 9 8 7 6 5 4 3 2 1");
-        run("3 0 0").include("3 2 1");
-        System.out.println("\n\nПроверка printNumberFromNToKStep");
-        checkMethod("PrintNumber", "static printNumberFromNToKStep", int.class, int.class, int.class);
-        run("5 15 3").include("5 8 11 14");
-        run("5 17 3").include("5 8 11 14 17");
-        run("-17 27 7").include("-17 -10 -3 4 11 18 25");
+    public void testDay() throws Exception {
+        System.out.println("\n\nПроверка Day");
+        checkMethod("Day", "static printDay", int.class);
+        checkMethod("Day", "static getNameDay", int.class);
+        run("1").include("понедельник");
+        run("2").include("вторник");
+        run("3").include("среда");
     }
 
     @Test
-    public void testCalcNumber() throws Exception {
-        System.out.println("\n\nCalcNumber");
-        checkMethod("CalcNumber", "static sumSequence", int.class, int.class);
-        run("4 15").include("Сумма: 114");
-        checkMethod("CalcNumber", "static mulSequence", int.class, int.class);
-        run("4 15").include("Произведение: 1644813312");
-        checkMethod("CalcNumber", "static factorial", int.class);
-        run("4 15").include("4! = 24");
-        checkMethod("CalcNumber", "static sumEven", int.class, int.class);
-        run("4 15").include("Сумма четных: 54");
-        checkMethod("CalcNumber", "static sumOdd", int.class, int.class);
-        run("4 15").include("Сумма нечетных: 60");
-
+    public void testFindMinMaxValue() throws Exception {
+        System.out.println("\n\nПоиск min max");
+        checkMethod("FindMinMaxValue", "static findMin", int.class, int.class);
+        checkMethod("FindMinMaxValue", "static findMax", int.class, int.class);
+        run("1\n2\n3\n4").include("min: 1\nmax: 4");
+        run("-1\n-2\n-3\n-4").include("min: -4\nmax: -1");
+        run("7\n7\n7\n7").include("min: 7\nmax: 7");
+        run("75\n57\n57\n75").include("min: 57\nmax: 75");
     }
 
     @Test
-    public void testSimpleNumber() {
-        System.out.println("\n\nSimpleNumber");
-        run("-12").include("Число -12 составное");
-        run("12").include("Число 12 составное");
-        run("121").include("Число 121 составное");
-        run("-113").include("Число -113 простое");
+    public void testNumberDayLeapYear() throws Exception {
+        System.out.println("\n\nNumberDayLeapYear");
+        checkMethod("NumberDayLeapYear", "static getNumberDay", int.class, String.class);
+        run("март\n24").include("84");
+        run("ДеКаБрЬ\n31").include("366");
+        run("Сентябрь\n12").include("256");
+        run("ФевраЛЬ\n29").include("60");
     }
 
-//    @Test
-//    public  void testPrintNumber_NumberFromZeroToTenInclude() throws Exception {
-//        System.out.println("\n\nПроверка printNumberFromZeroToTenInclude");
-//        TestItJava05 ok = run("", false);
-//        Method method = checkMethod(ok.aClass.getSimpleName(), "static printNumberFromZeroToTenInclude", int.class);
-//        method.invoke()
-//    }
+    @Test
+    public void testNumberDayNoLeapYear() throws Exception {
+        System.out.println("\n\nNumberDayLeapYear");
+        checkMethod("NumberDayLeapYear", "static getNumberDay", int.class, String.class);
+        run("март\n24").include("83");
+        run("ДеКаБрЬ\n31").include("365");
+        run("Сентябрь\n12").include("255");
+        run("ФевраЛЬ\n28").include("59");
+    }
 
+    @Test
+    public void testLeapYearWithMethod() throws Exception {
+        System.out.println("\n\nОпределение года");
+        checkMethod("LeapYearWithMethod", "static leapYear", int.class);
+        run("2000").include("Високосный");
+        run("1100").include("Невисокосный");
+        run("1600").include("Високосный");
+        run("2020").include("Високосный");
+        run("2100").include("Невисокосный");
+        run("-2015").include("Год не может быть отрицательным");
+    }
+
+
+    @Test
+    public void testNumberDayYear() throws Exception {
+        System.out.println("\n\nОпределение дня года");
+        checkMethod("NumberDayYear", "static checkMonth", String.class);
+        run("3\nМарт\n2000").include("63");
+        run("3\nМаРт\n1999").include("62");
+        run("3\nмарт\n-1999").include("62");
+        run("-3\nМАРТ\n-1999").include("62");
+        run("3\nмартик\n1500").include("Ошибка");
+    }
+
+    @Test
+    public void testMultiplicationNumbers() throws Exception {
+        System.out.println("\n\nпроверка умножения");
+        checkMethod("MultiplicationNumbers", "static convertNumberToString", int.class);
+        run("4\n3").include("четыре умножить на три равно двенадцать");
+        run("7\n3").include("семь умножить на три равно двадцать один");
+        run("15\n3").include("пятнадцать умножить на два равно тридцать");
+        run("15\n3").include("минус пятнадцать умножить на два равно минус тридцать");
+        run("2\n2").include("два умножить на два равно четыре");
+        run("-2\n2").include("минус два умножить на два равно минус четыре");
+        run("-2\n-2").include("минус два умножить на минус два равно четыре");
+        run("9\n9").include("девять умножить на девять равно восемьдесят один");
+    }
 
     /*
 ===========================================================================================================
@@ -130,11 +158,11 @@ public class TestItJava05 {
 
     //метод находит и создает класс для тестирования
     //по имени вызывающего его метода, testTaskA1 будет работать с TaskA1
-    private static TestItJava05 run(String in) {
+    private static TestItJava04 run(String in) {
         return run(in, true);
     }
 
-    private static TestItJava05 run(String in, boolean runMain) {
+    private static TestItJava04 run(String in, boolean runMain) {
         Throwable t = new Throwable();
         StackTraceElement trace[] = t.getStackTrace();
         StackTraceElement element;
@@ -153,11 +181,11 @@ public class TestItJava05 {
         System.out.println("Старт теста для " + clName);
         if (!in.isEmpty()) System.out.println("input:" + in);
         System.out.println("---------------------------------------------");
-        return new TestItJava05(clName, in, runMain);
+        return new TestItJava04(clName, in, runMain);
     }
 
     //-------------------------------  тест ----------------------------------------------------------
-    public TestItJava05() {
+    public TestItJava04() {
         //Конструктор тестов
     }
 
@@ -169,7 +197,7 @@ public class TestItJava05 {
     private StringWriter strOut = new StringWriter(); //накопитель строки вывода
 
     //Основной конструктор тестов
-    private TestItJava05(String className, String in, boolean runMain) {
+    private TestItJava04(String className, String in, boolean runMain) {
         //this.className = className;
         aClass = null;
         try {
@@ -195,18 +223,18 @@ public class TestItJava05 {
     }
 
     //проверка вывода
-    private TestItJava05 is(String str) {
+    private TestItJava04 is(String str) {
         assertTrue("ERROR:Ожидается такой вывод:\n<---начало---->\n" + str + "<---конец--->",
                 strOut.toString().equals(str));
         return this;
     }
 
-    private TestItJava05 include(String str) {
+    private TestItJava04 include(String str) {
         assertTrue("ERROR:Строка не найдена: " + str + "\n", strOut.toString().contains(str));
         return this;
     }
 
-    private TestItJava05 exclude(String str) {
+    private TestItJava04 exclude(String str) {
         assertTrue("ERROR:Лишние данные в выводе: " + str + "\n", !strOut.toString().contains(str));
         return this;
     }
