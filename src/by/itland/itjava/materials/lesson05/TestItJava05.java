@@ -48,7 +48,7 @@ public class TestItJava05 {
     }
 
     @Test
-    public void testSimpleNumber_() {
+    public void testSimpleNumber() {
         System.out.println("\n\nSimpleNumber");
         run("-12").include("Число -12 составное");
         run("12").include("Число 12 составное");
