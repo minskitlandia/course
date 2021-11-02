@@ -6,10 +6,31 @@ public class Day {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        String dday= printDay (number);
+        String dday= getNameDay (number);
         System.out.printf("%s",dday);
     }
-    private static String printDay(int day){
+    private static void printDay(int day){
+        switch (day) {
+            case 1:
+                System.out.println("понедельник");
+            case 2:
+                System.out.println("вторник");
+            case 3:
+                System.out.println("среда");
+            case 4:
+                System.out.println("четверг");
+            case 5:
+                System.out.println("пятница");
+            case 6:
+                System.out.println("суббота");
+            case 7:
+                System.out.println("воскресенье");
+            default:
+                System.out.println("error");
+        }
+
+    }
+    public static  String getNameDay(int day){
         switch (day) {
             case 1: return "понедельник";
             case 2: return "вторник";
@@ -21,4 +42,5 @@ public class Day {
             default: return "error";
         }
     }
+
 }
