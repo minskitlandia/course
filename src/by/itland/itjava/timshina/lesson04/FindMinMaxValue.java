@@ -9,8 +9,22 @@ public class FindMinMaxValue {
         int b = scanner.nextInt();
         int c = scanner.nextInt();
         int d = scanner.nextInt();
-        int min = a;
-        int max = b;
-        System.out.printf("min: %d\nmax: %d", a, b);
+        int min = findMin(findMin(a, b), findMin(c, d));
+        int max = findMax(findMax(a, b), findMax(c, d));
+        System.out.printf("min: %d\nmax: %d", min, max);
+
+    }
+
+    private static int findMin(int a, int b) {
+        if (a < b)
+            return a;
+        else
+            return b;
+    }
+    private static int findMax(int a, int b) {
+        if (a > b)
+            return a;
+        else
+            return b;
     }
 }
