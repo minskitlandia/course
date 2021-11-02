@@ -15,8 +15,7 @@ public class LeapYearWithMethod {
                 return "Високосный";
             } else
                 return "Невисокосный";
-        }
-        else
+        } else
             return "Год не может быть отрицательным";
     }
 }
