@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Quadratic {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
         int b = scanner.nextInt();
@@ -16,6 +17,5 @@ public class Quadratic {
         }
         else
             System.out.println("Уравнение не имеет корней");
-
     }
 }

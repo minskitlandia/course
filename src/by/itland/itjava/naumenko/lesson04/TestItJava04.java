@@ -1,4 +1,4 @@
-package by.itland.itjava.drobyazko.lesson04;
+package by.itland.itjava.naumenko.lesson04;
 
 import org.junit.Test;
 
@@ -85,8 +85,8 @@ public class TestItJava04 {
         checkMethod("MultiplicationNumbers", "static convertNumberToString", int.class);
         run("4\n3").include("четыре умножить на три равно двенадцать");
         run("7\n3").include("семь умножить на три равно двадцать один");
-        run("15\n2").include("пятнадцать умножить на два равно тридцать");
-        run("-15\n2").include("минус пятнадцать умножить на два равно минус тридцать");
+        run("15\n3").include("пятнадцать умножить на два равно тридцать");
+        run("15\n3").include("минус пятнадцать умножить на два равно минус тридцать");
         run("2\n2").include("два умножить на два равно четыре");
         run("-2\n2").include("минус два умножить на два равно минус четыре");
         run("-2\n-2").include("минус два умножить на минус два равно четыре");

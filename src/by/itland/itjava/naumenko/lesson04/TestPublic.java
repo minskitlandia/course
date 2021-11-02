@@ -1,13 +1,11 @@
-package by.itland.itjava.drobyazko.lesson03;
+package by.itland.itjava.naumenko.lesson04;
 
-import java.util.Locale;
 import java.util.Scanner;
 
-public class ConvertNumber {
+public class TestPublic {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
-        System.out.println((double)i);
+        TestIfExample.switchDay(i);
     }
 }
