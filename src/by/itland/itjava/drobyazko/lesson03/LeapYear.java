@@ -3,6 +3,9 @@ package by.itland.itjava.drobyazko.lesson03;
 import java.util.Scanner;
 
 public class LeapYear {
+    public LeapYear(int year) {
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
