@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class DayMonth {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt(); //месяц//
         int b = scanner.nextInt(); //день//
@@ -60,6 +59,7 @@ public class DayMonth {
             else
                 System.out.print("воскресенье");
         }
+
     }
 }
 

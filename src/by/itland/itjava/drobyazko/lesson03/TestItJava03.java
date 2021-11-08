@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.io.*;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -126,7 +127,7 @@ public class TestItJava03 {
     public void testPrice() {
         run("5,26").include("5 рублей 26 копеек");
         run("1,02").include("1 рубль 2 копейки");
-        run("23,01").include("23 рубля 1 копейка");
+        run("23,01").include("23 рубля  1 копейка");
         run("75,51").include("75 рублей 51 копейка");
         run("52,51").include("52 рубля 51 копейка");
     }
@@ -177,6 +178,7 @@ public class TestItJava03 {
             element = trace[i++];
         }
         while (!element.getMethodName().contains("test"));
+
         String[] path = element.getClassName().split("\\.");
         String nameTestMethod = element.getMethodName();
         String clName = nameTestMethod.replace("test", "");
