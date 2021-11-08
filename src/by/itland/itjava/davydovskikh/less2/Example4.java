@@ -1,12 +1,14 @@
-package by.itland.itjava.davydovskikh;
+package by.itland.itjava.davydovskikh.less2;
 
 import java.util.Scanner;
 
-public class Example5 {
+public class Example4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
-        double result = x - 10 * Math.sin(x) + Math.abs(Math.pow(x, 4)-Math.pow(x, 5));
+        int y = scanner.nextInt();
+
+        double result = x-Math.pow(10,Math.sin(x))+Math.cos(x-y);
         System.out.println(result);
     }
 }

@@ -1,4 +1,4 @@
-package by.itland.itjava.davydovskikh;
+package by.itland.itjava.davydovskikh.less2;
 
 import java.util.Scanner;
 
