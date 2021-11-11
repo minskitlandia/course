@@ -2,7 +2,7 @@ package by.itland.itjava.bulatsky.lesson04;
 
 import java.util.Scanner;
 
-public class MultiplicationNumbersModification {
+public class MultiplicationNumbers {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
