@@ -25,22 +25,22 @@ public class ThimbleGame {
                     bet = scanner.nextInt();
                     if (bet <= money) {
                         num = RandomNumber();
-                        System.out.println("Введи число в диапазоне от 1 до 3");
+                        System.out.println("Введите число в диапазоне от 1 до 3");
                         int ans = scanner.nextInt();
                         if (ans > 0 && ans < 4) {
                             if (ans == num) {
-                                System.out.printf("Ты угадал, +%d монет!\n", bet);
+                                System.out.printf("Вы угадали, +%d монет!\n", bet);
                                 money += bet;
                                 col -= 1;
                                 System.out.printf("Монеты: %d\nПопытки: %d\n", money, col);
                             } else {
-                                System.out.printf("Нет, не угадал, -%d монет\n", bet);
+                                System.out.printf("Нет, Вы не угадали, -%d монет\n", bet);
                                 money -= bet;
                                 col -= 1;
                                 System.out.printf("Монеты: %d\nПопытки: %d\n", money, col);
                             }
                         } else {
-                            System.out.println("Введи в диапозоне от 1 до 3");
+                            System.out.println("Введите в диапозоне от 1 до 3");
                         }
                     } else {
                         System.out.println("Ставка слишком большая!");
@@ -51,9 +51,9 @@ public class ThimbleGame {
             System.out.println("Отлично, до скорой встречи!");
         }
         if (col == 0) {
-            System.out.println("У тебя не хватает попыток");
+            System.out.println("У Вас не хватает попыток");
         } else if (money < 1) {
-            System.out.println("У тебя не хватает денег");
+            System.out.println("У Вас не хватает денег");
 
         }
     }
