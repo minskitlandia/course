@@ -1,8 +1,5 @@
 package by.itland.itjava.drobyazko.lesson04;
 
-import by.itland.itjava.drobyazko.lesson03.LeapYear;
-
-import java.util.Locale;
 import java.util.Scanner;
 
 public class NumberDayYear {
