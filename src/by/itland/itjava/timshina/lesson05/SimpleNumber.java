@@ -6,18 +6,25 @@ public class SimpleNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
-        int sum = 0;
-        for (int i = Math.abs(x) - 1; i == 0; i--) {
-            for (int j = 1; (j == Math.abs(x) + 1); j++) {
-                if (x % j != 0) {
-                    sum++;
+        boolean res = true;
+        int prom = 0;
+
+        if (x == 1) {
+            System.out.printf("Цифра %d не простое и не составное", x);
+        } else {
+            for (int i = 2; i <= Math.abs(x) / 2; i++) {
+                prom = Math.abs(x) % i;
+                if (prom == 0) {
+                    res = false;
+                    break;
                 }
             }
+            if (res) {
+                System.out.printf("Число %d простое", x);
+            } else {
+                System.out.printf("Число %d составное", x);
+            }
         }
-        if (sum > 2) {
-            System.out.println("sostavnoe");
-        } else {
-            System.out.println("prostoe");
-        }
+
     }
 }
