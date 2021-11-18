@@ -17,7 +17,7 @@ public class ThimbleGame {
         System.out.printf("Привет, у тебя есть %d монет, хочешь сыграть?\n", money);
         String start = scanner.nextLine();
 
-        if (start.equals("да")) {
+        if (start.equalsIgnoreCase("да")) {
             System.out.println("Отлично, начнём!");
             for (int i = money; i < 2000; i += 100) {
                 while (col > 0) {
