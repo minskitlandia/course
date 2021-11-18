@@ -2,6 +2,7 @@ package by.itland.itjava.materials.lesson05;
 
 public class Main {
     public static void main(String[] args) {
+        forExample();
     }
 
     private static void randomExample() {
@@ -85,6 +86,7 @@ public class Main {
 
     private static void forExample() {
         for (int i = 0; i < 10; i++) {
+
             System.out.println("i= " + i);
         }
     }
