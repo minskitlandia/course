@@ -53,10 +53,6 @@ public class SortingRunner {
 
 
         System.out.printf("%10d| %-20s| %15d| %15d| %15d| %10b|%n", array.length, nameSort, counter, change, time, Util.checkSort(array));
-//        System.out.printf("%s:%n Всего итераций: %d. " +
-//                "Всего перестановок: %d. " +
-//                "Прошло времени: %d мсек. " +
-//                "Массив отсортирован: %b %n", nameSort, counter, change, currentTime - start, Util.checkSort(array));
     }
 }
 
