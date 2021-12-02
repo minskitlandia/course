@@ -19,8 +19,12 @@ public class ThimbleGame {
 
         if (start.equalsIgnoreCase("да")) {
             System.out.println("Отлично, начнём!");
-            for (int i = money; i < 2000; i += 100) {
-                while (col > 0) {
+//            for (int i = money; i < 2000; i += 100) {
+            while (col > 0) {
+                if (money < 1) {
+                    System.out.println("У Вас не хватает денег");
+                    break;
+                } else {
                     System.out.println("Введите Вашу ставку");
                     bet = scanner.nextInt();
                     if (bet <= money) {
@@ -47,14 +51,11 @@ public class ThimbleGame {
                     }
                 }
             }
+            if (col == 0)
+                System.out.println("У Вас не хватает попыток");
+//            }
         } else {
             System.out.println("Отлично, до скорой встречи!");
-        }
-        if (col == 0) {
-            System.out.println("У Вас не хватает попыток");
-        } else if (money < 1) {
-            System.out.println("У Вас не хватает денег");
-
         }
     }
 }
