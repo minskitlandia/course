@@ -17,8 +17,11 @@ public class ThimbleGame {
         String start = scanner.nextLine();
 
         if (start.equalsIgnoreCase("да")) {
-            for (int i = money; i < 200; i += 10)
-                while (attempts > 0) {
+            while (attempts > 0) {
+                if (money <= 0) {
+                    System.out.println("Игра закончена. Твои деньги закончались");
+                    break;
+                } else {
                     System.out.println("сделайте вашу ставку:");
                     bet = scanner.nextInt();
                     if (bet <= money) {
@@ -45,17 +48,15 @@ public class ThimbleGame {
                     }
 
                 }
+            }
 
+            if (attempts == 0) {
+                System.out.println("Игра закончена. Твои попытки закончились");
+            }
         } else {
             System.out.println("ну пока:\\\\");
         }
-        if (attempts == 0) {
-            System.out.println("Игра закончена. Твои попытки закончились");
 
-        } else {
-            if (money <= 0) {
-                System.out.println("Игра закончена. Твои деньги закончались");
-            }
-        }
     }
+
 }
