@@ -47,11 +47,8 @@ public class SortingRunner {
     }
 
     private static void getInformationSort(int[] array, long start, long counter, long change, String nameSort) {
-
         long currentTime = new Date().getTime();
         long time = currentTime - start;
-
-
         System.out.printf("%10d| %-20s| %15d| %15d| %15d| %10b|%n", array.length, nameSort, counter, change, time, Util.checkSort(array));
     }
 }
