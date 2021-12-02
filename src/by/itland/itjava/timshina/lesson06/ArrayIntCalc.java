@@ -101,7 +101,7 @@ public class ArrayIntCalc {
 
     public static void printOdd(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 1) {
+            if (array[i] % 2 == 1 || array[i] % 2 == -1) {
                 System.out.print(array[i] + " ");
             }
         }
