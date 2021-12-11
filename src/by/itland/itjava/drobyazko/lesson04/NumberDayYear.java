@@ -15,13 +15,13 @@ public class NumberDayYear {
                 NumberDayNoLeapYear.getNumberDay(Math.abs(day), month);
 
             }
-        }
-        else{
+        } else {
             System.out.println("Ошибка");
         }
     }
-    private static boolean checkMonth(String month){
-        switch(month) {
+
+    private static boolean checkMonth(String month) {
+        switch (month) {
             case "январь":
             case "февраль":
             case "март":
@@ -33,8 +33,10 @@ public class NumberDayYear {
             case "сентябрь":
             case "октябрь":
             case "ноябрь":
-            case "декабрь": return true;
-            default: return false;
+            case "декабрь":
+                return true;
+            default:
+                return false;
         }
 
     }

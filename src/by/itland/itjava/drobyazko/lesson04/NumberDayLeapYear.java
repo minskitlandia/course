@@ -10,6 +10,7 @@ public class NumberDayLeapYear {
         int day = scanner.nextInt();
         getNumberDay(day,month);
     }
+
     public static void getNumberDay (int day, String month ){
         month = month.toLowerCase();
         if (month.equals("январь"))
