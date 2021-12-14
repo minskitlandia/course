@@ -16,6 +16,43 @@ import static org.junit.Assert.fail;
 //поставьте курсор на следующую строку и нажмите Ctrl+Shift+F10
 public class TestItJava09 {
 
+    @Test
+    public void testReplaceSmile() throws Exception {
+        System.out.println("\n\nПроверка ReplaceSmile");
+        run("Привет:( мне сегодня очень весело :(:(:(. а тебе:(?:")
+                .include("Привет:) мне сегодня очень весело :):):). а тебе:)?:");
+    }
+
+    @Test
+    public void testCheckLine() throws Exception{
+        System.out.println("\n\nПроверка CheckLine");
+        run("Привет меня зовут сергей Привет\nПривет").include("true");
+        run("Привет меня зовут сергей. Привет, Сергей!\nпривет").include("false");
+        run("Привет меня зовут сергей привет\nПривет").include("true");
+        run("Приветменя зовут сергейПрИвЕт\nпривет").include("true");
+    }
+    @Test
+    public void testEqualsArrayString() throws Exception {
+        System.out.println("\n\nПроверка EqualsArrayString");
+        run("коля вова толя поля\nвова поля толя коля").include("true");
+        run("коля вова      толя поля\nвова поля толя коля").include("true");
+        run("коля вова толя\nвова поля толя коля").include("false");
+        run("коля вова толя \nвова поля толя коля").include("false");
+        run("коля вова толя поля\nколя коля коля коля").include("false");
+        run("коля коля коля коля\nколя вова толя поля").include("false");
+    }
+
+
+    @Test
+    public void testSimpleName() throws Exception {
+        System.out.println("\n\nПроверка SimpleName");
+        run("Науменко Сергей Николаевич").include("Н.С.Н.");
+        run("науменко Сергей Николаевич").include("Н.С.Н.");
+        run("науменко сергей Николаевич").include("Н.С.Н.");
+        run("науменко сергей николаевич").include("Н.С.Н.");
+    }
+
+
     @Test(timeout = 5000)
     public void testTaskA1() throws Exception {
         System.out.println("Ожидается:\n" +
