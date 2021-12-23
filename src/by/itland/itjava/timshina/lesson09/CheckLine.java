@@ -12,7 +12,7 @@ public class CheckLine {
     }
 
     private static Boolean checkLine(String line, String word) {
-        return line.toLowerCase().startsWith(word.toLowerCase())&& line.toLowerCase().endsWith(word.toLowerCase());
+        return line.toLowerCase().startsWith(word.toLowerCase()) && line.toLowerCase().endsWith(word.toLowerCase());
 
     }
 }
