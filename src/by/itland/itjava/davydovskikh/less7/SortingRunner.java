@@ -1,19 +1,19 @@
 package by.itland.itjava.davydovskikh.less7;
 
-import jdk.jshell.execution.Util;
+
 
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
 
-public class SortingRunner {-
+public class SortingRunner {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
         int[] array = Util.generateArray(size);
         System.out.println("исходный массив на " + size + " элементов");
-//        Util.printArray(array);
+//         Util.printArray(array);
         System.out.println();
         System.out.printf("%-10s| %-20s| %-15s| %-15s| %-15s| %-10s|%n", "Размер", "Сортировка", "Итерации", "Перестановки", "Время (мсек)", "Результат");
         System.out.println("---------------------------------------------------------------------------------------------");
@@ -51,7 +51,7 @@ public class SortingRunner {-
     private static void getInformationSort(int[] array, long start, long counter, long change, String nameSort) {
         long currentTime = new Date().getTime();
         long time = currentTime - start;
-        System.out.printf("%10d| %-20s| %15d| %15d| %15d| %10b|%n", array.length, nameSort, counter, change, time, Util.checkSort(array));
+        System.out.printf("%10d| %-20s| %15d| %15d| %15d|%n", array.length, nameSort, counter, change, time);
     }
 }
 

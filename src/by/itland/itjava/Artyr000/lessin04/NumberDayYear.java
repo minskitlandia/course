@@ -1,5 +1,5 @@
 package by.itland.itjava.Artyr000.lessin04;
-import by.itland.itjava.timshina.lesson03.LeapYear;
+import by.itland.itjava.timshina.lesson03fftfftfgtfefgf.LeapYear;
 import java.time.Year;
 import java.util.Locale;
 import java.util.Scanner;
