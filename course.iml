@@ -7,6 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/src/by/itland/itjava/materials/lesson07" />
       <excludeFolder url="file://$MODULE_DIR$/src/by/itland/itjava/Artyr000/lesson06" />
     </content>
+    <content url="file://$MODULE_DIR$/out" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="init" level="project" />
