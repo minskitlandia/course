@@ -3,10 +3,6 @@ package by.itland.itjava.timshina.lesson08;
 import java.util.Scanner;
 
 public class AtmMachine {
-    /*private static int cup3 = 100;
-    private static int cup2 = 50;
-    private static int cup1 = 20;*/
-
     public static void main(String[] args) {
         int cup1 = 20;
         int cup2 = 50;
@@ -27,62 +23,48 @@ public class AtmMachine {
                 if (op == 1) {
                     System.out.println("Сколько хотите снять?");
                     take = scanner.nextInt();
-                    while (take > 19){
-                        while (take >= cup3){
+                    while (take > 19) {
+                        while (take >= cup3) {
                             take = take - cup3;
                             money = money - cup3;
                             count3++;
                         }
-                        while (take >= cup2){
+                        while (take >= cup2) {
                             take = take - cup2;
                             money = money - cup2;
                             count2++;
                         }
-                        while (take >= cup1){
+                        while (take >= cup1) {
                             take = take - cup1;
                             money = money - cup1;
                             count1++;
                         }
                     }
-                    System.out.printf("Снято: \n%d купюр по 20\n%d купюр по 50\n%d купюр по 100\n", count1, count2, count3);
-                    operation = false;
+                    System.out.printf("Снято: \n%d купюр(а/ы) по 20\n%d купюр(а/ы) по 50\n%d купюр(а/ы) по 100\n", count1, count2, count3);
                     System.out.println("Хотите продолжить?");
-                    String a = scanner.nextLine();
-                    operation = a.equals("да");
+                    String a = scanner.next();
+                    operation = a.equalsIgnoreCase("да");
                 } else if (op == 2) {
                     System.out.println("Сколько хотите положить?");
                     money = money + scanner.nextInt();
-                    System.out.println("На вашем счету: " + " " + money);
-                    operation = false;
+                    System.out.println("На вашем счету: " + " " + money + " " + " деняк");
                     System.out.println("Хотите продолжить?");
-                    String a = scanner.nextLine();
-                    operation = a.equals("да");
+                    String a = scanner.next();
+                    operation = a.equalsIgnoreCase("да");
                 } else if (op == 3) {
                     System.out.println("На вашем счету: " + " " + money);
-                    operation = false;
                     System.out.println("Хотите продолжить?");
-                    String a = scanner.nextLine();
-                    operation = a.equals("да");
+                    String a = scanner.next();
+                    operation = a.equalsIgnoreCase("да");
                 } else {
                     System.out.println("Неизвестная операция");
-                    operation = false;
                     System.out.println("Хотите продолжить?");
-                    String a = scanner.nextLine();
-                    operation = a.equals("да");
+                    String a = scanner.next();
+                    operation = a.equalsIgnoreCase("да");
                 }
-
             } else {
                 System.out.println("Хорошо, до свидания!");
             }
         }
     }
-    /*private static Boolean check(Boolean x, Boolean y){
-        System.out.println("Хотите продолжить?");
-        Scanner scanner = new Scanner(System.in);
-        String a = scanner.nextLine();
-        if (a.equals("да")){
-            return x;
-        }
-        else return y;
-    }*/
 }
