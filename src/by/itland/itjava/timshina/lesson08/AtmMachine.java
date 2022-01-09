@@ -13,14 +13,14 @@ public class AtmMachine {
         int cup3 = 100;
         int money = 0;
         int take = 0;
-        Boolean operation;
+        boolean operation = true;
         int count1 = 0;
         int count2 = 0;
         int count3 = 0;
         System.out.println("Хотите начать?");
         Scanner scanner = new Scanner(System.in);
         String start = scanner.nextLine();
-        while (operation=true) {
+        while (operation) {
             if (start.equals("да")) {
                 System.out.println("Выберите необходимую операцию: \n1. Снять наличные \n2. Положить наличные на счёт \n3. Посмотреть баланс");
                 int op = scanner.nextInt();
