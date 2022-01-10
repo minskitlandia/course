@@ -22,8 +22,8 @@ public class Cat {
     }
 
     public static void main(String[] args) {
-        by.itland.itjava.materials.lesson08.Cat cat = new by.itland.itjava.materials.lesson08.Cat("Серый", (byte) 3);
-        by.itland.itjava.materials.lesson08.Cat cat2 = new by.itland.itjava.materials.lesson08.Cat((byte) 3, "Пума");
+        Cat cat = new Cat("Серый", (byte) 3);
+        Cat cat2 = new Cat((byte) 3, "Пума");
 
         System.out.println(cat);
         System.out.println(cat2);

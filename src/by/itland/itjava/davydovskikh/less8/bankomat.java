@@ -3,15 +3,36 @@ package by.itland.itjava.davydovskikh.less8;
 import java.util.Scanner;
 
 public class bankomat {
+    public int count20;
+    public int count50;
+    public int count100;
+
+    public bankomat(int twenty, int fifty, int hundred){
+        this.count20 = twenty;
+        this.count50 = fifty;
+        this.count100 = hundred;
+    }
+    public int addBYN20(int number) {
+        return count20 += number;
+    }
+
+    public int addBYN50(int number) {
+        return count50 += number;
+    }
+
+    public int addBYN100(int number) {
+        return count100 += number;
+    }
+
     public static void main(String[] args) {
+        int count20 = 0;
+        int count50 = 0;
+        int count100 = 0;
         int twenty = 20;
         int fifty = 50;
         int hundred = 100;
         int check = 0; //счёт, либо баланс с самого начала
         int snyat = 0; // для снятия, а вообще это тимшина придумала такое мне название ахаххахаха
-        int count20 = 0;
-        int count50 = 0;
-        int count100 = 0;
         boolean oper = true;
         System.out.println("Вставьте вашу карту");
         System.out.println(" ");
@@ -49,7 +70,6 @@ public class bankomat {
                         check = check - fifty;
                         count50++;
                     }
-
                 }
                 System.out.printf("Снято: \n%d купюр(а/ы) по 20\n%d купюр(а/ы) по 50\n%d купюр(а/ы) по 100\n",
                         count20, count50, count100);
@@ -62,7 +82,7 @@ public class bankomat {
                 String a = scanner.next();
                 oper = a.equalsIgnoreCase("0");
             } else if (answer == 0) {
-                return;
+                break;
             }
         }
     }
