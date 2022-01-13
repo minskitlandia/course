@@ -16,6 +16,10 @@ public class AtmMachine {
     int hundred;
     int balance;
 
+    public  AtmMachine(){
+
+    }
+
     public AtmMachine(int twenty, int fifty, int hundred) {
         this.twenty = twenty;
         this.fifty = fifty;
@@ -86,17 +90,18 @@ public class AtmMachine {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        AtmMachine atm = new AtmMachine(5, 5, 5);
-        atm.infoAtm();
-        atm.addMoney(1, 1, 1);
-        atm.infoAtm();
+        AtmMachine atmEmpty= new AtmMachine();
+//        AtmMachine atm = new AtmMachine(5,5,5);
+        atmEmpty.infoAtm();
+        atmEmpty.addMoney(10, 10, 10);
+        atmEmpty.infoAtm();
         System.out.println("Сколько хотите снять?");
         int money = scanner.nextInt();
-        if (!atm.getMoney(money)) {
+        if (!atmEmpty.getMoney(money)) {
             System.out.println("В банкомате недостаточно денег(");
         } else {
-            atm.infoCash(money);
+            atmEmpty.infoCash(money);
         }
-        atm.infoAtm();
+        atmEmpty.infoAtm();
     }
 }
