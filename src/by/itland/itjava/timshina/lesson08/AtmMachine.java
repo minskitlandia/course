@@ -23,7 +23,6 @@ public class AtmMachine {
                 if (op == 1) {
                     System.out.println("Сколько хотите снять?");
                     take = scanner.nextInt();
-                    while (take > 19) {
                         while (take >= cup3) {
                             take = take - cup3;
                             money = money - cup3;
@@ -39,7 +38,6 @@ public class AtmMachine {
                             money = money - cup1;
                             count1++;
                         }
-                    }
                     System.out.printf("Снято: \n%d купюр(а/ы) по 20\n%d купюр(а/ы) по 50\n%d купюр(а/ы) по 100\n", count1, count2, count3);
                     System.out.println("Хотите продолжить?");
                     String a = scanner.next();
