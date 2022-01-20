@@ -5,21 +5,11 @@ public class Point {
     private int x;
     private int y;
 
-<<<<<<< HEAD
-    public Point() {
-    }
-
-=======
->>>>>>> f9147c2 (lesson010.naumenko)
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f9147c2 (lesson010.naumenko)
     public int getX() {
         return x;
     }
