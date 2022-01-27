@@ -42,9 +42,11 @@ public class Runner {
         System.out.printf("Диагональ: %.2f\n", box.diagonal());
         System.out.println(box.check());*/
 
-        /*Door door = new Door(1, 2);
+        Door door = new Door(1, 2);
         Window window = new Window(2, 1);
-        Room room = new Room(20, 30, 5, 2);
+        Room room = new Room(20, 30, 5);
+        room.setDoor(door);
+        room.setWin(window);
         System.out.println(room.square1());
         System.out.println(room.square2());
     }

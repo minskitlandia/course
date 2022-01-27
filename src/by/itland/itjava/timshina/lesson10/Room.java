@@ -2,21 +2,22 @@ package by.itland.itjava.timshina.lesson10;
 
 import java.awt.*;
 
-/*public class Room {
+public class Room {
     private int x;
     private int y;
     private int z;
-    private int win;
+    private Window win;
+    private Door door;
 
     public Room() {
     }
 
 
-    public Room(int x, int y, int z, int win) {
+    public Room(int x, int y, int z) {
         this.x = x;
         this.y = y;
         this.z = z;
-        this.win = win;
+
     }
 
     public int getX() {
@@ -43,22 +44,31 @@ import java.awt.*;
         this.z = z;
     }
 
-    public int getWin() {
+    public Window getWin() {
         return win;
     }
 
-    public void setWin(int win) {
+    public void setWin(Window win) {
         this.win = win;
     }
 
-    public int square1(){
-        return 2 * (x * y + y * z + z * x);
-    }
-    public int square2(){
-        return 2 * (x * y + y * z + z * x)-(Door.getH()*Door.getW()+ Window.getH()*Window.getW()*getWin());
-    }
-    public double repair(){
-        return 2 * (y * z + z * x)-(Door.getH()*Door.getW()+Window.getH()*Window.getW()*getWin())/(0.53*10);
+    public Door getDoor() {
+        return door;
     }
 
+    public void setDoor(Door door) {
+        this.door = door;
+    }
+
+    public int square1() {
+        return 2 * (x * y + y * z + z * x);
+    }
+
+    public int square2() {
+        return 2 * (x * y + y * z + z * x) - (door.getH() * door.getW() + win.getH() * win.getW());
+    }
+
+    public double repair() {
+        return 2 * (y * z + z * x) - (door.getH() * door.getW() + win.getH() * win.getW()) / (0.53 * 10);
+    }
 }
