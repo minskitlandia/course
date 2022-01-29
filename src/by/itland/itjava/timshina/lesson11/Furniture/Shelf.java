@@ -1,6 +1,8 @@
-package by.itland.itjava.timshina.lesson11;
+package by.itland.itjava.timshina.lesson11.Furniture;
 
-public class Shelf extends Furniture{
+import by.itland.itjava.timshina.lesson11.Furniture.Furniture;
+
+public class Shelf extends Furniture {
     private int seg;
     private int sizeSeg;
 

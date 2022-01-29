@@ -1,4 +1,4 @@
-package by.itland.itjava.timshina.lesson11;
+package by.itland.itjava.timshina.lesson11.Furniture;
 
 public class Furniture {
     private String name;
