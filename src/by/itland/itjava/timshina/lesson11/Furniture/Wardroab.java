@@ -1,6 +1,8 @@
-package by.itland.itjava.timshina.lesson11;
+package by.itland.itjava.timshina.lesson11.Furniture;
 
-public class Wardroab extends Furniture{
+import by.itland.itjava.timshina.lesson11.Furniture.Furniture;
+
+public class Wardroab extends Furniture {
     private String material;
     private int doors;
     private int miniwardroabs;

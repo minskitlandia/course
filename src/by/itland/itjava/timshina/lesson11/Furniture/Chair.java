@@ -1,4 +1,4 @@
-package by.itland.itjava.timshina.lesson11;
+package by.itland.itjava.timshina.lesson11.Furniture;
 
 public class Chair extends Furniture {
     private int legs;
@@ -22,7 +22,6 @@ public class Chair extends Furniture {
 
     public void setLegs(int legs) {
         this.legs = legs;
-
     }
 
     public int getHeight() {

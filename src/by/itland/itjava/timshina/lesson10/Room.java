@@ -1,6 +1,7 @@
 package by.itland.itjava.timshina.lesson10;
 
 import java.awt.*;
+import java.util.Scanner;
 
 public class Room {
     private int x;
@@ -70,5 +71,11 @@ public class Room {
 
     public double repair() {
         return 2 * (y * z + z * x) - (door.getH() * door.getW() + win.getH() * win.getW()) / (0.53 * 10);
+    }
+    public double price(){
+        System.out.println("Введите цену 1 рулона");
+        Scanner scanner = new Scanner(System.in);
+        double x = scanner.nextDouble();
+        return x;
     }
 }
