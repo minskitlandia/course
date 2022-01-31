@@ -22,10 +22,10 @@
 Задание
     Абстрактный класс Geom c полями width, color и координата отсчета абстрактный метод draw(),
     Дочерние классы:
-        Line поле length
-        Rect поля length, height
-        Ring	поле radius
-        Ellipse radius1, radius2
+        Line: поле length
+        Rect: поля length, height
+        Ring: поле radius
+        Ellipse: radius1, radius2
     Переопределить метод draw(), создать 4 объекта класса Geom, записать их в массив
 
 
