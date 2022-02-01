@@ -34,11 +34,11 @@ public class Table extends Furniture {
     @Override
     public String toString() {
         return "Table{" +
-                "name=" + getName() +
-                " size" + getSize() +
-                " price" + getPrice() +
-                "klegs=" + klegs +
-                ", square=" + square +
+                "name " + getName() +
+                ", size " + getSize() +
+                ", price " + getPrice() +
+                ", klegs " + klegs +
+                ", square " + square +
                 '}';
     }
 }

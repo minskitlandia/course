@@ -5,7 +5,14 @@ import by.itland.itjava.timshina.lesson11.Apps.Desktop;
 import by.itland.itjava.timshina.lesson11.Apps.Phone;
 import by.itland.itjava.timshina.lesson11.Apps.Tablet;
 import by.itland.itjava.timshina.lesson11.Furniture.Chair;
+import by.itland.itjava.timshina.lesson11.Furniture.Shelf;
+import by.itland.itjava.timshina.lesson11.Furniture.Table;
+import by.itland.itjava.timshina.lesson11.Furniture.Wardroab;
 import by.itland.itjava.timshina.lesson11.Geom.*;
+import by.itland.itjava.timshina.lesson11.Recipes.Pizza;
+import by.itland.itjava.timshina.lesson11.Recipes.Porridge;
+import by.itland.itjava.timshina.lesson11.Recipes.Recipes;
+import by.itland.itjava.timshina.lesson11.Recipes.Salad;
 
 import java.util.Scanner;
 
@@ -18,8 +25,14 @@ public class Runner {
             case 1:
                 Chair taburet = new Chair("табуретка", 60, 40, 4, 50, false);
                 Chair stul = new Chair("стул", 50, 30, 3, 40, true);
+                Shelf shelf = new Shelf("полочка", 20, 40, 2, 30);
+                Table table = new Table("столик", 30, 20, 3, 30);
+                Wardroab wardroab = new Wardroab("шкааааф", 100, 100, "дерево какое-то", 2, 6);
                 System.out.println(taburet);
                 System.out.println(stul);
+                System.out.println(shelf);
+                System.out.println(table);
+                System.out.println(wardroab);
                 break;
             case 2:
                 System.out.println("1. Phone\n2. Tablet\n3. Desktop");
@@ -57,11 +70,26 @@ public class Runner {
                 geom[1] = rect;
                 geom[2] = ring;
                 geom[3] = ellipse;
-                for (Geom item:geom){
+                for (Geom item : geom) {
                     System.out.println(item);
                     item.draw();
                 }
                 break;
+            case 4:
+                Pizza pizza = new Pizza("четыре сыра, или же просто 'лучшая пицца в мире'", "??веганский??", "тесто, сыр, сыр, сыр, сыр", "всё смешать, подогреть");
+                Salad salad = new Salad("цезарь", "обычный", "пшеничные гренки, пармезан, яйца, курица, помидорки", "смешать вот это всё");
+                Porridge porridge = new Porridge("овсяная", "веганский", "овсяная каша + вода/молоко", "смешать, подогреть - готово");
+                Recipes[] recipes = new Recipes[3];
+                recipes[0] = pizza;
+                recipes[1] = salad;
+                recipes[2] = porridge;
+                for (Recipes item : recipes) {
+                    System.out.println(item);
+                    item.showIngredients();
+                    item.showRecipe();
+                }
+                break;
+
             default:
                 System.out.println("error");
         }
