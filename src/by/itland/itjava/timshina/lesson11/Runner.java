@@ -41,9 +41,11 @@ public class Runner {
                     case 1:
                         Phone phone1 = new Phone("Gallery", "Arial", false);
                         System.out.println(phone1);
+                        break;
                     case 2:
                         Tablet tablet1 = new Tablet("Spotify", "Arial", false, "150x90", "Top");
                         System.out.println(tablet1);
+                        break;
                     case 3:
                         System.out.println("1. Full size\n2. Medium size\n3. Small size");
                         int d = scanner.nextInt();
@@ -51,13 +53,17 @@ public class Runner {
                             case 1:
                                 Desktop desktop1 = new Desktop("YouTube", "Arial", true, "297x210", "Centre, top");
                                 System.out.println(desktop1);
+                                break;
                             case 2:
                                 Desktop desktop2 = new Desktop("YouTube", "Arial", true, "198x140", "Centre, top");
                                 System.out.println(desktop2);
+                                break;
                             case 3:
                                 Desktop desktop3 = new Desktop("YouTube", "Arial", true, "100x70", "Centre, top");
                                 System.out.println(desktop3);
+                                break;
                         }
+                        break;
                 }
                 break;
             case 3:
