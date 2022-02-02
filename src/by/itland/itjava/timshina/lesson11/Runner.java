@@ -13,6 +13,9 @@ import by.itland.itjava.timshina.lesson11.Recipes.Pizza;
 import by.itland.itjava.timshina.lesson11.Recipes.Porridge;
 import by.itland.itjava.timshina.lesson11.Recipes.Recipes;
 import by.itland.itjava.timshina.lesson11.Recipes.Salad;
+import by.itland.itjava.timshina.lesson11.Wagon.AutoWagon;
+import by.itland.itjava.timshina.lesson11.Wagon.Cistern;
+import by.itland.itjava.timshina.lesson11.Wagon.Wagon;
 
 import java.util.Scanner;
 
@@ -95,7 +98,25 @@ public class Runner {
                     item.showRecipe();
                 }
                 break;
+            case 5:
+                AutoWagon autowagon = new AutoWagon(20);
+                Cistern cistern = new Cistern(20, 4);
+                Cistern cistern1 = new Cistern(15, 3);
 
+                Wagon[] wagons = new Wagon[3];
+                wagons[0] = autowagon;
+                wagons[1] = cistern;
+                wagons[2] = cistern1;
+
+                for (Wagon item: wagons){
+                    System.out.println("**");
+                    System.out.println(item);
+                    item.printCount();
+                    System.out.println();
+                    System.out.printf("weight: %.2f", item.weight());
+                    System.out.println();
+                }
+                break;
             default:
                 System.out.println("error");
         }
