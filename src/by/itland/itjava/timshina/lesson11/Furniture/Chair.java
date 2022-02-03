@@ -43,12 +43,12 @@ public class Chair extends Furniture {
     @Override
     public String toString() {
         return "Chair{" +
-                "name=" + getName() +
-                " size" + getSize() +
-                " price" + getPrice() +
-                " legs=" + legs +
-                ", height=" + height +
-                ", back=" + back +
+                "name " + getName() +
+                " size " + getSize() +
+                " price " + getPrice() +
+                " legs= " + legs +
+                ", height= " + height +
+                ", back= " + back +
                 '}';
     }
 

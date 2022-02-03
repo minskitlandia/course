@@ -34,11 +34,11 @@ public class Shelf extends Furniture {
     @Override
     public String toString() {
         return "Shelf{" +
-                "name=" + getName() +
-                " size" + getSize() +
-                " price" + getPrice() +
-                "seg=" + seg +
-                ", sizeSeg=" + sizeSeg +
+                "name " + getName() +
+                ", size " + getSize() +
+                ", price " + getPrice() +
+                ", seg " + seg +
+                ", sizeSeg " + sizeSeg +
                 '}';
     }
 }

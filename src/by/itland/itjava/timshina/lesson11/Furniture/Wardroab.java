@@ -44,12 +44,12 @@ public class Wardroab extends Furniture {
     @Override
     public String toString() {
         return "Wardroab{" +
-                "name=" + getName() +
-                " size" + getSize() +
-                " price" + getPrice() +
-                "material='" + material + '\'' +
-                ", doors=" + doors +
-                ", miniwardroabs=" + miniwardroabs +
+                "name " + getName() +
+                ", size " + getSize() +
+                ", price " + getPrice() +
+                ", material '" + material  +
+                ", doors " + doors +
+                ", miniwardroabs " + miniwardroabs +
                 '}';
     }
 }

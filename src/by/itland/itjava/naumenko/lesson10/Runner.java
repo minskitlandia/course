@@ -1,4 +1,5 @@
 package by.itland.itjava.naumenko.lesson10;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -17,6 +18,5 @@ public class Runner {
         roll.getNumerator();
 
         System.out.println(roll);
-
     }
 }
