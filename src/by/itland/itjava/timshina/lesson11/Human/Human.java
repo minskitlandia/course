@@ -3,26 +3,11 @@ package by.itland.itjava.timshina.lesson11.Human;
 public abstract class Human {
     private int age;
     private String name;
-    private boolean SideJob = false;
+
 
     public Human(int age, String name) {
-    }
-
-
-    public abstract double earnings();
-
-    public Human(int age, String name, boolean sideJob) {
         this.age = age;
         this.name = name;
-        SideJob = sideJob;
-    }
-
-    public boolean isSideJob() {
-        return SideJob;
-    }
-
-    public void setSideJob(boolean sideJob) {
-        SideJob = sideJob;
     }
 
     public int getAge() {
@@ -49,5 +34,5 @@ public abstract class Human {
                 '}';
     }
 
-    public abstract double earnings1();
+    public abstract double earnings();
 }
