@@ -1,6 +1,5 @@
 package by.itland.itjava.timshina.lesson11;
 
-import by.itland.itjava.timshina.lesson11.Apps.Apps;
 import by.itland.itjava.timshina.lesson11.Apps.Desktop;
 import by.itland.itjava.timshina.lesson11.Apps.Phone;
 import by.itland.itjava.timshina.lesson11.Apps.Tablet;
@@ -9,6 +8,9 @@ import by.itland.itjava.timshina.lesson11.Furniture.Shelf;
 import by.itland.itjava.timshina.lesson11.Furniture.Table;
 import by.itland.itjava.timshina.lesson11.Furniture.Wardroab;
 import by.itland.itjava.timshina.lesson11.Geom.*;
+import by.itland.itjava.timshina.lesson11.Human.Employee;
+import by.itland.itjava.timshina.lesson11.Human.Human;
+import by.itland.itjava.timshina.lesson11.Human.Student;
 import by.itland.itjava.timshina.lesson11.Recipes.Pizza;
 import by.itland.itjava.timshina.lesson11.Recipes.Porridge;
 import by.itland.itjava.timshina.lesson11.Recipes.Recipes;
@@ -16,6 +18,7 @@ import by.itland.itjava.timshina.lesson11.Recipes.Salad;
 import by.itland.itjava.timshina.lesson11.Wagon.AutoWagon;
 import by.itland.itjava.timshina.lesson11.Wagon.Cistern;
 import by.itland.itjava.timshina.lesson11.Wagon.Wagon;
+
 
 import java.util.Scanner;
 
@@ -114,6 +117,24 @@ public class Runner {
                     item.printCount();
                     System.out.println();
                     System.out.printf("weight: %.2f", item.weight());
+                    System.out.println();
+                }
+                break;
+            case 6:
+                Employee employee = new Employee(25, "Inkognito", 3000, "LuNaSa");
+                Student student = new Student(19, "Anonim", "univer", true);
+                Student student1 = new Student(22, "anonimka", "univer1", false);
+                Human[] humans = new Human[3];
+                humans[0] = employee;
+                humans[1] = student;
+                humans[2] = student1;
+                for (Human item: humans){
+                    System.out.println("**");
+                    System.out.println(item);
+                    if (item.isSideJob()){
+                        System.out.printf("%.2f", item.earnings1());
+                    }
+                    else System.out.printf("%.2f", item.earnings());
                     System.out.println();
                 }
                 break;
