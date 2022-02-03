@@ -4,7 +4,7 @@ public class Cube extends Geom implements CalcGeom, CalcVolume{
 
     @Override
     public void calculateAria() {
-        System.out.println("Площшадь куба");
+        System.out.println("Площадь куба");
     }
 
     @Override
