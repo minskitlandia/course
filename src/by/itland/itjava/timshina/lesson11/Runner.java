@@ -131,10 +131,7 @@ public class Runner {
                 for (Human item: humans){
                     System.out.println("**");
                     System.out.println(item);
-                    if (item.isSideJob()){
-                        System.out.printf("%.2f", item.earnings1());
-                    }
-                    else System.out.printf("%.2f", item.earnings());
+                    System.out.println(item.earnings());
                     System.out.println();
                 }
                 break;

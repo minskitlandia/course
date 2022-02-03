@@ -27,10 +27,9 @@ public class Employee extends Human{
     public void setCompany(String company) {
         this.company = company;
     }
-
     @Override
     public double earnings(){
-        return salary*0.9 + (Math.random()*50+50)/100 * salary;
+        return 0;
     }
 
     @Override
@@ -43,8 +42,4 @@ public class Employee extends Human{
                 '}';
     }
 
-    @Override
-    public double earnings1() {
-        return 0;
-    }
 }
