@@ -7,11 +7,12 @@ public class bankomat {
     public int count50;
     public int count100;
 
-    public bankomat(int twenty, int fifty, int hundred){
+    public bankomat(int twenty, int fifty, int hundred) {
         this.count20 = twenty;
         this.count50 = fifty;
         this.count100 = hundred;
     }
+
     public int addBYN20(int number) {
         return count20 += number;
     }
@@ -54,22 +55,22 @@ public class bankomat {
             if (answer == 2) {
                 System.out.println("Какую сумму вы желаете получить?");
                 snyat = scanner.nextInt();
-                while (check > 19) {
-                    while (snyat >= count100) {
-                        snyat = snyat - hundred;
-                        check = check - hundred;
-                        count100++;
-                    }
-                    while (snyat >= count20) {
-                        snyat = snyat - twenty;
-                        check = check - twenty;
-                        count20++;
-                    }
-                    while (snyat >= count50) {
-                        snyat = snyat - fifty;
-                        check = check - fifty;
-                        count50++;
-                    }
+                while (snyat >= 100) {
+                    snyat = snyat - hundred;
+                    check = check - hundred;
+                    count100++;
+                }
+                while (snyat >= 50) {
+                    snyat = snyat - fifty;
+                    check = check - fifty;
+                    count50++;
+
+                }
+                while (snyat >= 20) {
+                    snyat = snyat - twenty;
+                    check = check - twenty;
+                    count20++;
+
                 }
                 System.out.printf("Снято: \n%d купюр(а/ы) по 20\n%d купюр(а/ы) по 50\n%d купюр(а/ы) по 100\n",
                         count20, count50, count100);
@@ -77,7 +78,7 @@ public class bankomat {
                 oper = a.equalsIgnoreCase("0");
             }
             if (answer == 3) {
-                System.out.println("На вашем балансе: " + check  + " BYN");
+                System.out.println("На вашем балансе: " + check + " BYN");
                 System.out.println("Eсли хотите продолжить нажмите 0");
                 String a = scanner.next();
                 oper = a.equalsIgnoreCase("0");

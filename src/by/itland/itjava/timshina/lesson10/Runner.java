@@ -3,9 +3,11 @@ package by.itland.itjava.timshina.lesson10;
 import java.awt.*;
 import java.util.Scanner;
 
+
 public class Runner {
 
     public static void main(String[] args) {
+
         System.out.println("1. Rectangle\n2. ComplexNumber\n3. Triangle\n4. Book\n5. Roll\n6. Box\n7. Room");
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
