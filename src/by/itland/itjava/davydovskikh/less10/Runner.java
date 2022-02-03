@@ -3,16 +3,13 @@ package by.itland.itjava.davydovskikh.less10;
 public class Runner {
 
     public static void main(String[] args) {
+        Point a = new Point(0,0);
+        Point b = new Point(5,0);
+        Point c = new Point(2,7);
 
-//        Rectangle rectangle = new Rectangle(new Point(0,0), new Point(3,3));
-//        System.out.println(rectangle.checkSquare());
-//        rectangle.draw();
+        Triangle triangle = new Triangle(a,b,c);
 
-    ComplexNumber complexNumber = new ComplexNumber(5,2);
-        System.out.println(complexNumber);
-        System.out.println(complexNumber.abc());
-        complexNumber.updateReal(-2);
-        complexNumber.updateIm(3);
-        System.out.println(complexNumber);
+        System.out.println(triangle.perimetr());
+        System.out.println(triangle.square());
     }
 }
