@@ -1,8 +1,9 @@
 package by.itland.itjava.timshina.lesson11.Human;
 
-public class Student extends Human{
+public class Student extends Human {
     private String study;
     private boolean sideJob;
+
     public Student(int age, String name, String study, boolean sideJob) {
         super(age, name);
         this.study = study;
@@ -27,19 +28,16 @@ public class Student extends Human{
 
     @Override
     public double earnings() {
-        return 0;
+        return sideJob ? Math.random() * 30 + 20 : 0;
     }
 
-    public double earnings1(){
-        return Math.random()*30+20;
-    }
 
     @Override
     public String toString() {
         return "Student{" +
                 "age " + getAge() +
-                ", name " + getName()  +
-                ", study " + study  +
+                ", name " + getName() +
+                ", study " + study +
                 ", sideJob " + sideJob +
                 '}';
     }
