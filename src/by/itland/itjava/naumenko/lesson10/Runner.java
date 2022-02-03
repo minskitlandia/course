@@ -1,8 +1,5 @@
 package by.itland.itjava.naumenko.lesson10;
 
-import java.time.Year;
-import java.util.Calendar;
-
 public class Runner {
 
     public static void main(String[] args) {
@@ -21,8 +18,5 @@ public class Runner {
         roll.getNumerator();
 
         System.out.println(roll);
-
-
-
     }
 }
