@@ -11,9 +11,9 @@ public class Phone extends Apps{
     @Override
     public String toString() {
         return "Phone{" +
-                "frames = " + getFrames()+
-                "font = " + getFont() +
-                " name= " + getName() +
+                ", frames = " + getFrames()+
+                ", font = " + getFont() +
+                ", name= " + getName() +
                 "}";
     }
 }

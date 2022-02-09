@@ -2,12 +2,12 @@ package by.itland.itjava.timshina.lesson11.Apps;
 
 public class Tablet extends Apps{
     private String size;
-    private int position;
+    private String position;
 
     public Tablet() {
     }
 
-    public Tablet(String name, String font, Boolean frames, String size, int position) {
+    public Tablet(String name, String font, Boolean frames, String size, String position) {
         super(name, font, frames);
         this.size = size;
         this.position = position;
@@ -21,11 +21,22 @@ public class Tablet extends Apps{
         this.size = size;
     }
 
-    public int getPosition() {
+    public String getPosition() {
         return position;
     }
 
-    public void setPosition(int position) {
+    public void setPosition(String position) {
         this.position = position;
+    }
+
+    @Override
+    public String toString() {
+        return "Tablet{" +
+                "name " + getName() +
+                ", font " + getFont()  +
+                ", frames " + getFrames() +
+                ", size " + size +
+                ", position " + position +
+                '}';
     }
 }

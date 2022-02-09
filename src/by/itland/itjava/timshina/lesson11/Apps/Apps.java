@@ -38,4 +38,13 @@ public class Apps {
     public void setFrames(Boolean frames) {
         this.frames = frames;
     }
+
+    @Override
+    public String toString() {
+        return "Apps{" +
+                "name='" + name + '\'' +
+                ", font='" + font + '\'' +
+                ", frames=" + frames +
+                '}';
+    }
 }

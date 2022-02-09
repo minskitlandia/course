@@ -6,6 +6,7 @@ public class Runner {
         john.display();
         Employee den = new Employee("Den", "Google");
         den.display();
+        System.out.println(den);
     }
 }
 
@@ -50,6 +51,11 @@ class Employee extends Person {
         super.display();
 //        System.out.printf("Работник %s ", getName());
         System.out.printf("работает в %s\n", company);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("работает в %s\n", company);
     }
 }
 

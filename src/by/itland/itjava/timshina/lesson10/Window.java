@@ -1,6 +1,8 @@
 package by.itland.itjava.timshina.lesson10;
 
+
 public class Window {
+
     private int h;
     private int w;
 
@@ -11,6 +13,7 @@ public class Window {
         this.h = h;
         this.w = w;
     }
+
 
     public int getH() {
         return h;
