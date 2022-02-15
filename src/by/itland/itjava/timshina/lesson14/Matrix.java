@@ -1,8 +1,8 @@
-package by.itland.itjava.timshina.lesson13.Calculator;
+package by.itland.itjava.timshina.lesson14;
 
-import java.util.Arrays;
 
-public class Matrix extends Var{
+
+public class Matrix extends Var {
     private double[][] matrix;
 
     public Matrix(double[][] matrix) {
