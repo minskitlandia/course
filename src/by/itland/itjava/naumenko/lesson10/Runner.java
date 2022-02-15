@@ -8,8 +8,8 @@ public class Runner {
     public static void main(String[] args) {
 
 
-        System.out.println(Year.now().getValue());
-        System.out.println(Calendar.getInstance().get(Calendar.YEAR));
+//        System.out.println(Year.now().getValue());
+//        System.out.println(Calendar.getInstance().get(Calendar.YEAR));
 
 
         Roll roll = new Roll(18, 342);
