@@ -1,6 +1,5 @@
-package by.itland.itjava.bulatsky.lesson13;
+package by.itland.itjava.bulatsky.lesson14;
 
-import java.util.Arrays;
 
 public class Matrix extends Var {
 
