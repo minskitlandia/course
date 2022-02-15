@@ -41,7 +41,7 @@ public class Scalar extends Var {
             double result = this.value - operand2.value;
             return new Scalar(result);
         }
-        return other.add(this);
+        return other.sub(this);
     }
 
     @Override
@@ -51,7 +51,7 @@ public class Scalar extends Var {
             double result = this.value * operand2.value;
             return new Scalar(result);
         }
-        return other.add(this);
+        return other.mul(this);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class Scalar extends Var {
             double result = this.value / operand2.value;
             return new Scalar(result);
         }
-        return other.add(this);
+        return other.div(this);
     }
 
     @Override

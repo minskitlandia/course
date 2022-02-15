@@ -12,22 +12,22 @@ public class Runner {
         System.out.println(scalar.mul(scalar2));
         System.out.println(scalar.sub(scalar2));
         System.out.println(scalar.div(scalar2));
-
-        //Операции с Vector
+//
+//        //Операции с Vector
         System.out.println(vector.add(scalar2));
         System.out.println(vector.mul(scalar2));
-//        System.out.println(vector.sub(scalar2));
-//        System.out.println(vector.div(scalar2));
-
+        System.out.println(vector.sub(scalar2));
+        System.out.println(vector.div(scalar2));
+//
         System.out.println(vector.add(vector2));
         System.out.println(vector.mul(vector2));
-//        System.out.println(vector.sub(vector2));
-//        System.out.println(vector.div(vector2));
+        System.out.println(vector.sub(vector2));
+        System.out.println(vector.div(vector2));
 
         System.out.println(scalar.add(vector2));
-        System.out.println(scalar.mul(vector2));
-//        System.out.println(scalar.sub(vector2));
-//        System.out.println(scalar.div(vector2));
+        System.out.println(scalar.mul(vector));
+        System.out.println(scalar.sub(vector2));
+        System.out.println(scalar.div(vector2));
 
 
 
