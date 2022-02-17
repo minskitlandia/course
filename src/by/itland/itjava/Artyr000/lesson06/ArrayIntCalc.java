@@ -63,4 +63,51 @@ public class ArrayIntCalc{
         }
         return 0;
     }
+    public static int findMaxIndex(int[] array){
+        int max = findMax(array);
+        for (int i = 1; i < array.length; i++){
+            if (array[i] == max){
+                return i;
+            }
+        }
+        return 0;
+    }
+    public static void changeMaxMinElement(int[] array){
+        int dop = 0;
+        int MinInd = findMinIndex(array);
+        int MaxInd = findMaxIndex(array);
+        dop = array[MinInd];
+        array [MinInd] = array[MaxInd];
+        array[MaxInd] = dop;
+        printArray(array);
+    }
+    public static void printOdd(int[] array){
+        for (int i = 0; i < array.length; i++){
+            if (array[i] % 2 == 1 || array[i] % 2 == -1)
+                System.out.print(array[i] + " ");
+        }
+    }
+
+    public static void printEven(int[] array){
+        for (int i = 0; i < array.length; i++){
+            if (array[i] % 2 == 0)
+                System.out.print(array[i] + " ");
+        }
+    }
+    public static boolean findElement(int[] array, int n){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == n) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static int indexElement(int[] array, int n){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == n) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
