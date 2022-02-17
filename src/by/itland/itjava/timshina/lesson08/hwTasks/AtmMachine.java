@@ -1,4 +1,4 @@
-package by.itland.itjava.timshina.lesson08;
+package by.itland.itjava.timshina.lesson08.hwTasks;
 
 import java.util.Scanner;
 

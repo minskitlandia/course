@@ -10,22 +10,21 @@ public class Matrix extends Var {
     }
 
     public Matrix(String matrix){
-        matrix = matrix.replaceAll("[},{]", " ");
-        matrix = matrix.trim();
-        String[] matrix1 = matrix.split("");
-        String[] matrix2 = matrix1[0].split("\\s+");
-        int stolbik = matrix2.length;
-        int stroka = matrix1.length;
-        String[] matrixend = matrix.split("\\s+");
-        int n = 0;
-        double[][] matrixend1 = new double[stolbik][stroka];
-        for (int i = 0; i < matrixend1.length; i++) {
-            for (int j = 0; j < matrixend1[i].length; j++) {
-                matrixend1[i][j] = Double.parseDouble(matrixend[n]);
-                n++;
+
+        String[] split = matrix.trim().split("(}, \\s*\\{)");
+        int countRow = split.length;
+        int countCol = split[0].split("\\s*, \\s*").length;
+        double[][] arr = new double[countRow][countCol];
+
+        for (int i = 0; i < countRow; i++) {
+            split[i] = split[i].replaceAll("[{}]", "");
+            String[] splitRow = split[i].split("\\s*, \\s*");
+            for (int j = 0; j < splitRow.length; j++) {
+                arr[i][j] = Double.parseDouble(splitRow[j]);
             }
         }
-        this.matrix =  matrixend1;
+        this.matrix = arr;
+
     }
 
     public Matrix(Matrix matrix){
