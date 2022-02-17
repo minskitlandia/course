@@ -1,4 +1,4 @@
-package by.itland.itjava.timshina.lesson08;
+package by.itland.itjava.timshina.lesson08.hwTasks;
 
 public class Artifact {
     long number;

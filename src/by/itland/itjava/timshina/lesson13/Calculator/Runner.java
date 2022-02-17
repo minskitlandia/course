@@ -4,7 +4,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-      /*  Scalar scalar1 = new Scalar(5.6);
+        Scalar scalar1 = new Scalar(5.6);
         Scalar scalar2 = new Scalar("5.6");
         Scalar scalar3 = new Scalar(scalar2);
 
@@ -18,9 +18,6 @@ public class Runner {
 
         System.out.println(vector);
         System.out.println(vector2);
-        System.out.println(vector3);*/
-
-        Matrix matrix = new Matrix(" {1, 2, 3, 4}, {5, 6, 7, 8}}");
-        System.out.println(matrix);
+        System.out.println(vector3);
     }
 }
