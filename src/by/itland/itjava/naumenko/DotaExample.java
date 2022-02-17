@@ -4,7 +4,7 @@ public class DotaExample {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Hero hero1 = new Hero("ROHAN", 505, 50, 25);
+        Hero hero1 = new Hero("ROHAN", 505, 25, 25);
         Hero hero2 = new Hero("AXE", 450, 30, 20);
 
         Thread thread1 = new Thread(() -> {
@@ -39,8 +39,8 @@ public class DotaExample {
             thread2.start();
             while (!Thread.currentThread().isInterrupted()) {
                 if (hero1.isDeath() || hero2.isDeath()) {
-                    thread1.interrupt();
-                    thread2.interrupt();
+                    thread1.stop();
+                    thread2.stop();
                     Thread.currentThread().interrupt();
                 }
             }
@@ -71,18 +71,18 @@ class Hero {
     private String name;
     private int power;
     private int dexterity;
-    private volatile int hp;
+    private int hp;
     private int exp = 0;
     private int level = 1;
 
     public Hero() {
     }
 
-    public Hero(String name, int hp, int power, int lovkost) {
+    public Hero(String name, int hp, int power, int dexterity) {
         this.name = name;
         this.hp = hp;
         this.power = power;
-        this.dexterity = lovkost;
+        this.dexterity = dexterity;
     }
 
     private void printInfoHero(String text) {
@@ -97,7 +97,7 @@ class Hero {
         printInfoHero("получил новый уровень");
     }
 
-    public synchronized void atack(Hero other) {
+    public void atack(Hero other) {
         if (exp >= 1000 * level && level < 25) {
             addLevel();
         }
