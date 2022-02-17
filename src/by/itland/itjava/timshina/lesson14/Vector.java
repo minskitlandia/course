@@ -3,6 +3,10 @@ package by.itland.itjava.timshina.lesson14;
 public class Vector extends Var {
     private double[] value;
 
+    public double[] getValue() {
+        return value;
+    }
+
     public Vector(double[] value) {
         this.value = value;
     }
@@ -41,6 +45,18 @@ public class Vector extends Var {
             return new Vector(result);
         }
         return other.add(this);
+    }
+    @Override
+    public Var mul(Var other){
+        if(other instanceof Vector){
+            Vector operand2 = (Vector) other;
+            double result = 0;
+            for (int i = 0; i < this.value.length; i++) {
+                result += this.value[i] + operand2.value[i];
+            }
+            return new Scalar(result);
+        }
+        return  super.mul(this);
     }
 
     @Override
