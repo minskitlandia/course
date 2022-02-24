@@ -53,69 +53,63 @@ public class Vector extends Var {
         return other.add(other);
     }
 
-   @Override
-     public Var sub(Var other) {
+    public Var sub(Var other) {
+        if (other instanceof Scalar) {
+            Scalar operand2 = (Scalar) other;
+            double[] result = new double[this.value.length];
+            for (int i = 0; i < result.length; i++) {
+                result[i] = this.value[i] - operand2.getValue();
+            }
+            return new Vector(result);
+        } else if (other instanceof Vector) {
+            Vector operand2 = (Vector) other;
+            double[] result = new double[this.value.length];
+            for (int i = 0; i < result.length; i++) {
+                result[i] = this.value[i] - operand2.value[i];
+            }
+            return new Vector(result);
+        }
+        return other.add(this);
+    }
 
-    if (other instanceof Scalar) {
-         Scalar operand2 = (Scalar) other;
-           double[] result = new double[this.value.length];
-          for (int i = 0; i < result.length; i++) {
-              result[i] = this.value[i] - operand2.getValue();
-          }
-          return new Vector(result);
-    } else if (other instanceof Vector) {
-         Vector operand2 = (Vector) other;
-           double[] result = new double[this.value.length];
-          for (int i = 0; i < result.length; i++) {
-              result[i] = this.value[i] - operand2.value[i];
-          }
-          return new Vector(result);
-      }
-      return super.sub(other);
-     }
+    public Var mul(Var other) {
+        if (other instanceof Scalar) {
+            Scalar operand2 = (Scalar) other;
+            double[] result = new double[this.value.length];
+            for (int i = 0; i < result.length; i++) {
+                result[i] = this.value[i] * operand2.getValue();
+            }
+            return new Vector(result);
+        } else if (other instanceof Vector) {
+            Vector operand2 = (Vector) other;
+            double[] result = new double[this.value.length];
+            for (int i = 0; i < result.length; i++) {
+                result[i] = this.value[i] * operand2.value[i];
+            }
+            return new Vector(result);
+        }
+        return other.add(this);
+    }
 
-//     @Override
-//    public Var mul(int[] arr1, int[] arr2) {
-//
-//      if ( instanceof Scalar){
-//          Scalar operand2 = (Scalar) other;
-//          double[] result = new double[this.value.length];
-//          for (int i = 0; i < result.length; i++) {
-//              result[i] = this.value[i] * operand2.getValue();
-//          }
-//          return new Vector(result);
-//
-//          int col = Math.min(arr1.length, arr2.length);
-//          int res = 0;
-//          for (int i = 0; i < col; i++) {
-//              res += arr1[i] * arr2[i];
-//          }
-//
-//
-//          return res;
-//      }
-//    }
-//
-//
-//    @Override
-//    public Var div(int[] arr1, int[] arr2) {
-//      if ( instanceof Scalar){
-//          Scalar operand2 = (Scalar) other;
-//          double[] result = new double[this.value.length];
-//          for (int i = 0; i < result.length; i++) {
-//              result[i] = this.value[i] / operand2.getValue();
-//          }
-//          return new Vector(result);
-//
-//
-//          int col = Math.min(arr1.length, arr2.length);
-//          int res = 0;
-//          for (int i = 0; i < col; i++) {
-//              res += arr1[i] / arr2[i];
-//          }
-//          return res;
-//      }
-//    }
+    public Var div(Var other) {
+        if (other instanceof Scalar) {
+            Scalar operand2 = (Scalar) other;
+            double[] result = new double[this.value.length];
+            for (int i = 0; i < result.length; i++) {
+                result[i] = this.value[i] / operand2.getValue();
+            }
+            return new Vector(result);
+        } else if (other instanceof Vector) {
+            Vector operand2 = (Vector) other;
+            double[] result = new double[this.value.length];
+            for (int i = 0; i < result.length; i++) {
+                result[i] = this.value[i] / operand2.value[i];
+            }
+            return new Vector(result);
+        }
+        return other.add(this);
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("{");
