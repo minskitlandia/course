@@ -1,4 +1,4 @@
-package by.itland.itjava.naumenko.lesson14;
+package by.itland.itjava.naumenko.lesson14_3;
 
 public class Matrix extends Var {
 
