@@ -1,6 +1,4 @@
-package by.itland.itjava.Artyr000.lessin04;
-import java.time.Year;
-import java.util.Locale;
+package by.itland.itjava.Artyr000.lesson04;
 import java.util.Scanner;
 
 public class NumberDayYear {
