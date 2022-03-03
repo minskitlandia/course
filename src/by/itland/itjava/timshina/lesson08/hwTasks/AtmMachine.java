@@ -1,4 +1,4 @@
-package by.itland.itjava.timshina.lesson08;
+package by.itland.itjava.timshina.lesson08.hwTasks;
 
 import java.util.Scanner;
 
@@ -25,8 +25,8 @@ public class AtmMachine {
                     System.out.println("Сколько хотите снять?");
                     take = scanner.nextInt();
 
-                    while (take > 19){
-                        while (take >= cup3){
+                    while (take > 19) {
+                        while (take >= cup3) {
 
                             take = take - cup3;
                             money = money - cup3;
@@ -40,7 +40,7 @@ public class AtmMachine {
                             count2++;
                         }
 
-                        while (take >= cup1){
+                        while (take >= cup1) {
                             take = take - cup1;
                             money = money - cup1;
                             count1++;
@@ -79,4 +79,5 @@ public class AtmMachine {
             }
         }
     }
+}
 
