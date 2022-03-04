@@ -18,7 +18,7 @@ public class Matrix extends Var {
 
     public Matrix(String value) {
 
-        String[] split = value.trim().split("(},\\s*\\{)");
+        String[] split = value.trim().split("(}\\s*,\\s*\\{)");
         int countRow = split.length;
         int countCol = split[0].split("\\s*,\\s*").length;
         double[][] arr = new double[countRow][countCol];
