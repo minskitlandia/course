@@ -68,30 +68,41 @@ public class MyListSecond<T> {
         }
 
         array=newArr;
-        capacity = array.length;
+
         return true;
     }
 
-/*    public boolean add(int index, T element){
-        T[] newArr = (T[]) new Object[capacity + 1];
-        capacity++;
-        for (int i = 0; i < index; i++) {
-            newArr[i] = array[i];
-        }
-        for (int i = index; i < newArr.length; i++) {
-            if(i==index){
-                newArr[i] = element;
-            }
-            else {
-                newArr[i] = array[i+1];
-            }
-        }
-//        array (ArrayList<T>);
-        array = newArr;
-        return true;
-    }*/
+   public void add(int index, T element) {
+        if (capacity>size() + 1) {
+            T[] newArr = (T[]) new Object[capacity + 1];
 
-     public String add(int index, T element){
+            for (int i = 0; i < index; i++) {
+                newArr[i] = array[i];
+            }
+            newArr[index] = element;
+            for (int i = index + 1; i < array.length; i++) {
+                newArr[i] = array[i - 1];
+            }
+            array = newArr;
+
+        }
+
+        else {
+            capacity = (int) (capacity * 1*5);
+            T[] newArr = (T[]) new Object[capacity];
+            for (int i = 0; i < index; i++) {
+                newArr[i] = array[i];
+            }
+            newArr[index] = element;
+            for (int i = index + 1; i < array.length; i++) {
+                newArr[i] = array[i - 1];
+            }
+            array = newArr;
+        }
+        current++;
+   }
+
+   /*public String add(int index, T element){
          T[] newArr = (T[]) new Object[capacity + 1];
          capacity++;
          for (int i = 0; i < index; i++) {
@@ -102,6 +113,7 @@ public class MyListSecond<T> {
                  newArr[i] = element;
              }
              else {
+
                  newArr[i] = array[i+1];
              }
          }
@@ -114,7 +126,7 @@ public class MyListSecond<T> {
              }
          }
          return sb.append("]").toString();
-     }
+     }*/
      public boolean set(int index, T element){
          T[] newArr = (T[]) new Object[capacity + 1];
          capacity++;
