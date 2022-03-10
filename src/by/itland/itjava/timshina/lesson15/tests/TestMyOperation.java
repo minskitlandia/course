@@ -1,4 +1,6 @@
-package by.itland.itjava.timshina.lesson15;
+package by.itland.itjava.timshina.lesson15.tests;
+
+import by.itland.itjava.timshina.lesson15.tests.MyOperation;
 
 public class TestMyOperation {
 

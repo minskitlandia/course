@@ -1,4 +1,4 @@
-package by.itland.itjava.timshina.lesson15;
+package by.itland.itjava.timshina.lesson15.tests;
 
 public class MyOperation<T, R> {
     private T value1;

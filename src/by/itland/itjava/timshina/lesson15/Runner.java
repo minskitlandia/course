@@ -34,5 +34,17 @@ public class Runner {
         System.out.println(myListSecondInteger.get(2));
         myListSecondInteger.remove(3);
         System.out.println(myListSecondInteger);
+        System.out.println(myListSecondInteger.getCapacity());
+        System.out.println(myListSecondInteger.size());
+        System.out.println(myListSecondInteger.toArray());
+        System.out.println(myListSecondInteger);
+        /*myListSecondInteger.add(1, 1);
+        System.out.println(myListSecondInteger);*/
+    //  System.out.println(myListSecondInteger.add(1, 1));
+        //нельзя изменить размер массива :\ (новый выводить прямо в методе тоже не хочет)
+        myListSecondInteger.set(1, 1);
+        System.out.println(myListSecondInteger);
+        System.out.println(myListSecondInteger.get(1));
+        //мой метод get(T) не хочет использоваться
     }
 }

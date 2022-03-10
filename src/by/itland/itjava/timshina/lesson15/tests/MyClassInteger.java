@@ -1,20 +1,19 @@
-package by.itland.itjava.timshina.lesson15;
+package by.itland.itjava.timshina.lesson15.tests;
 
-public class MyClassGeneric<T> {
-    T a;
-    T b;
+public class MyClassInteger {
+    int a;
+    int b;
 
-    public MyClassGeneric(T a, T b) {
+    public MyClassInteger(int a, int b) {
         this.a = a;
         this.b = b;
     }
 
     @Override
     public String toString() {
-        return "MyClassGeneric{" +
+        return "MyClassInteger{" +
                 "a=" + a +
                 ", b=" + b +
                 '}';
     }
-
 }
