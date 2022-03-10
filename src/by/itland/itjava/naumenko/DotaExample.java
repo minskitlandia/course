@@ -14,7 +14,7 @@ public class DotaExample {
                     break;
                 try {
                     hero1.atack(hero2);
-                    Thread.sleep(1000 / hero1.getDexterity());
+                    Thread.sleep(1000 / hero1.getDexterity()+1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
