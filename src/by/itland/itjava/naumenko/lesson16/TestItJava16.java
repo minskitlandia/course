@@ -1,4 +1,4 @@
-package by.itland.itjava.materials.lesson16;
+package by.itland.itjava.naumenko.lesson16;
 
 
 import org.junit.Test;
