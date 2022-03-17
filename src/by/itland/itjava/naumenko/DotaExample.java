@@ -4,17 +4,15 @@ public class DotaExample {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Hero hero1 = new Hero("ROHAN", 505, 25, 25);
-        Hero hero2 = new Hero("AXE", 450, 30, 20);
+        Hero hero1 = new Hero("ROHAN", 20, 25, 25);
+        Hero hero2 = new Hero("AXE", 20, 30, 20);
 
         Thread thread1 = new Thread(() -> {
             System.out.println("поток her1 start");
-            while (true) {
-                if (Thread.currentThread().isInterrupted())
-                    break;
+            while (!Thread.currentThread().isInterrupted()) {
                 try {
                     hero1.atack(hero2);
-                    Thread.sleep(1000 / hero1.getDexterity()+1000);
+                    Thread.sleep(1000 / hero1.getDexterity() + 1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -23,9 +21,7 @@ public class DotaExample {
         });
 
         Thread thread2 = new Thread(() -> {
-            while (true) {
-                if (Thread.currentThread().isInterrupted())
-                    break;
+            while (!Thread.currentThread().isInterrupted()) {
                 try {
                     hero2.atack(hero1);
                     Thread.sleep(1000 / hero2.getDexterity());
@@ -39,8 +35,8 @@ public class DotaExample {
             thread2.start();
             while (!Thread.currentThread().isInterrupted()) {
                 if (hero1.isDeath() || hero2.isDeath()) {
-                    thread1.stop();
-                    thread2.stop();
+                    thread1.interrupt();
+                    thread2.interrupt();
                     Thread.currentThread().interrupt();
                 }
             }
@@ -49,12 +45,10 @@ public class DotaExample {
         game.start();
 
 
-
         while (true) {
             if (hero1.isDeath() || hero2.isDeath()) {
                 hero1.status(hero2);
                 break;
-
             }
 //            Thread.sleep(5000);
             System.out.println(hero1);
@@ -101,16 +95,12 @@ class Hero {
         if (exp >= 1000 * level && level < 25) {
             addLevel();
         }
-
-        if ((int) (Math.random() * 100) >= (100 - other.dexterity)) {
-            int atack = (int) (Math.random() * this.power);
-            other.hp -= atack;
-            int expForAtack = (int) (Math.random() * 100 * level);
-            this.exp += expForAtack;
+        if (!other.isDeath()) {
+            other.hp -= 1;
+//        int expForAtack = (int) (Math.random() * 100 * level);
+            this.exp += 100;
             printInfoHero("Нанес удар");
-            System.out.println(atack);
-        } else {
-            other.printInfoHero("уклонился--------------------------------");
+            System.out.println(power);
         }
     }
 
