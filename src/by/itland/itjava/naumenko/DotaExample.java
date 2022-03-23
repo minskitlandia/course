@@ -35,8 +35,8 @@ public class DotaExample {
             thread2.start();
             while (!Thread.currentThread().isInterrupted()) {
                 if (hero1.isDeath() || hero2.isDeath()) {
-                    thread1.interrupt();
-                    thread2.interrupt();
+                    thread1.stop();
+                    thread2.stop();
                     Thread.currentThread().interrupt();
                 }
             }

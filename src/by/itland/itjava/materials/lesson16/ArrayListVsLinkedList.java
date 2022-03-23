@@ -8,7 +8,7 @@ import java.util.List;
 public class ArrayListVsLinkedList {
 
     public static void main(String[] args) {
-        List<Integer> arrayList = new ArrayList<>();
+        List<Integer> arrayList = new ArrayList<>(10000);
         List<Integer> linkedList = new LinkedList<>();
 
         System.out.println("Добавление в конец ArrayList: " + add(arrayList, 100000, Place.LAST));
