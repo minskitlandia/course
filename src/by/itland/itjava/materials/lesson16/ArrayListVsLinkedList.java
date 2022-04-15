@@ -18,10 +18,10 @@ public class ArrayListVsLinkedList {
         System.out.printf("Удаление из конца ArrayList  %d: %d мс %n", countRemove, remove(arrayList, countRemove, Place.LAST));
         System.err.printf("Удаление из конца LinkedList  %d: %d мс %n", countRemove, remove(linkedList, countRemove, Place.LAST));
         System.out.println("--------------------------------------");
-        System.err.printf("Добавление в середину ArrayList  %d: %d мс %n", countAdd, add(arrayList, countAdd, Place.MIDDLE));
-        System.out.printf("Добавление в середину LinkedList  %d: %d мс %n", countAdd, add(linkedList, countAdd, Place.MIDDLE));
-        System.err.printf("Удаление из середины ArrayList  %d: %d мс %n", countRemove, remove(arrayList, countRemove, Place.MIDDLE));
-        System.out.printf("Удаление из середины LinkedList  %d: %d мс %n", countRemove, remove(linkedList, countRemove, Place.MIDDLE));
+        System.out.printf("Добавление в середину ArrayList  %d: %d мс %n", countAdd, add(arrayList, countAdd, Place.MIDDLE));
+        System.err.printf("Добавление в середину LinkedList  %d: %d мс %n", countAdd, add(linkedList, countAdd, Place.MIDDLE));
+        System.out.printf("Удаление из середины ArrayList  %d: %d мс %n", countRemove, remove(arrayList, countRemove, Place.MIDDLE));
+        System.err.printf("Удаление из середины LinkedList  %d: %d мс %n", countRemove, remove(linkedList, countRemove, Place.MIDDLE));
         System.out.println("--------------------------------------");
         System.err.printf("Добавление в начало ArrayList  %d: %d мс %n", countAdd, add(arrayList, countAdd, Place.FIRST));
         System.out.printf("Добавление в начало LinkedList %d: %d мс %n", countAdd, add(linkedList, countAdd, Place.FIRST));
