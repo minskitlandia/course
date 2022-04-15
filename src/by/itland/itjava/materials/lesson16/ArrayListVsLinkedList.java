@@ -8,25 +8,25 @@ import java.util.List;
 public class ArrayListVsLinkedList {
 
     public static void main(String[] args) {
-        List<Integer> arrayList = new ArrayList<>(10000);
+        List<Integer> arrayList = new ArrayList<>(1000000);
         List<Integer> linkedList = new LinkedList<>();
+        int countAdd = 100000;
+        int countRemove = 10000;
 
-        System.out.println("Добавление в конец ArrayList: " + add(arrayList, 100000, Place.LAST));
-        System.err.println("Добавление в конец LinkedList: " + add(linkedList, 100000, Place.LAST));
-        System.out.println("Удаление из конца ArrayList: " + remove(arrayList, 10000, Place.LAST));
-        System.err.println("Удаление из конца LinkedList: " + remove(linkedList, 10000, Place.LAST));
-
+        System.out.printf("Добавление в конец ArrayList %d: %d мс %n", countAdd, add(arrayList, countAdd, Place.LAST));
+        System.err.printf("Добавление в конец LinkedList %d: %d мс %n", countAdd, add(linkedList, countAdd, Place.LAST));
+        System.out.printf("Удаление из конца ArrayList  %d: %d мс %n", countRemove, remove(arrayList, countRemove, Place.LAST));
+        System.err.printf("Удаление из конца LinkedList  %d: %d мс %n", countRemove, remove(linkedList, countRemove, Place.LAST));
         System.out.println("--------------------------------------");
-        System.err.println("Добавление в середину ArrayList: " + add(arrayList, 100000, Place.MIDDLE));
-        System.out.println("Добавление в середину LinkedList: " + add(linkedList, 100000, Place.MIDDLE));
-        System.err.println("Удаление из середины ArrayList: " + remove(arrayList, 10000, Place.MIDDLE));
-        System.out.println("Удаление из середины LinkedList: " + remove(linkedList, 10000, Place.MIDDLE));
-
+        System.err.printf("Добавление в середину ArrayList  %d: %d мс %n", countAdd, add(arrayList, countAdd, Place.MIDDLE));
+        System.out.printf("Добавление в середину LinkedList  %d: %d мс %n", countAdd, add(linkedList, countAdd, Place.MIDDLE));
+        System.err.printf("Удаление из середины ArrayList  %d: %d мс %n", countRemove, remove(arrayList, countRemove, Place.MIDDLE));
+        System.out.printf("Удаление из середины LinkedList  %d: %d мс %n", countRemove, remove(linkedList, countRemove, Place.MIDDLE));
         System.out.println("--------------------------------------");
-        System.err.println("Добавление в начало ArrayList: " + add(arrayList, 100000, Place.FIRST));
-        System.out.println("Добавление в начало LinkedList: " + add(linkedList, 100000, Place.FIRST));
-        System.err.println("Удаление из начала ArrayList: " + remove(arrayList, 10000, Place.FIRST));
-        System.out.println("Удаление из начала LinkedList: " + remove(linkedList, 10000, Place.FIRST));
+        System.err.printf("Добавление в начало ArrayList  %d: %d мс %n", countAdd, add(arrayList, countAdd, Place.FIRST));
+        System.out.printf("Добавление в начало LinkedList %d: %d мс %n", countAdd, add(linkedList, countAdd, Place.FIRST));
+        System.err.printf("Удаление из начала ArrayList %d: %d мс %n", countRemove, remove(arrayList, countRemove, Place.FIRST));
+        System.out.printf("Удаление из начала LinkedList  %d: %d мс %n", countRemove, remove(linkedList, countRemove, Place.FIRST));
 
     }
 
@@ -39,7 +39,7 @@ public class ArrayListVsLinkedList {
             }
         } else if (place == Place.MIDDLE) {
             for (int i = 0; i < count; i++) {
-                list.add(150, i);
+                list.add(list.size() / 2, i);
             }
         } else {
             for (int i = 0; i < count; i++) {
@@ -60,7 +60,7 @@ public class ArrayListVsLinkedList {
             }
         } else if (place == Place.MIDDLE) {
             for (int i = 0; i < count; i++) {
-                list.remove(150);
+                list.remove(list.size() / 2);
             }
         } else {
             for (int i = 0; i < count; i++) {
